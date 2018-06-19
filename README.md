@@ -50,69 +50,7 @@ with <img src="https://latex.codecogs.com/gif.latex?\epsilon"> sufficiently smal
     <img src="https://latex.codecogs.com/gif.latex?q%5E%7B%5Cleft%28%20n%20%5Cright%29%7D%20%3D%20-%20%5Cfrac%7B1%7D%7B%5Cleft%7C%5CGamma_s%20%5Cleft%28%20%5Ctheta%20%5Cright%20%29%5Cright%7C%7D%20%5Cint_%7B%5CGamma_s%20%5Cleft%28%20%5Ctheta%20%5Cright%20%29%7D%20%5Cleft%5B%20%5Cfrac%7B1%7D%7B2%7D%20%5Cleft%28%20y%5E%7B%5Cleft%28%20n%20%5Cright%29%7D%20-%20y_d%20%5Cright%29%20%5E2%20&plus;%20%5Cfrac%7B%5Cpartial%20v%7D%7B%5Cpartial%20n%7D%5E%7B%5Cleft%28%20n%20%5Cright%29%7D%20%5Cfrac%7B%5Cpartial%20y%7D%7B%5Cpartial%20n%7D%5E%7B%5Cleft%28%20n%20%5Cright%29%7D%20%5Cright%5D%20%5Cmathrm%7Bd%7D%20%5CGamma.">
 </p>
 
-
-
-
-
-
-
-
-
-, <img src="https://latex.codecogs.com/gif.latex?y"> the state variable and <img src="https://latex.codecogs.com/gif.latex?y_d"> a target function. The minimization problem is subject to the elliptic partial differential equation
-
-<p align="center">
-    <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bcases%7D%20-%5CDelta%20y%20%3D%20f%20&plus;%20u%20%26%20%5Ctext%7Bin%20%7D%20%5COmega%2C%20%5C%5C%20y%20%3D%200%20%26%20%5Ctext%7Bon%20%7D%20%5CGamma.%20%5Cend%7Bcases%7D">
-</p>
-
-In order to use the conjugate gradient method, the state variable is separated in two terms as
-
-<p align="center">
-    <img src="https://latex.codecogs.com/gif.latex?y%20%3D%20y_u%20&plus;%20y_%7Bf%7D%2C">
-</p>
-
-where <img src="https://latex.codecogs.com/gif.latex?y_u"> solves the state equation with zero Dirichlet boundary conditions,
-
-<p align="center">
-    <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bcases%7D%20-%5CDelta%20y_u%20%3D%20u%20%26%20%5Ctext%7Bin%20%7D%20%5COmega%2C%20%5C%5C%20y_u%20%3D%200%20%26%20%5Ctext%7Bon%20%7D%20%5CGamma%2C%20%5Cend%7Bcases%7D">
-</p>
-
-and <img src="https://latex.codecogs.com/gif.latex?y_f"> is the control-free solution to the state equation,
-
-<p align="center">
-    <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bcases%7D%20-%5CDelta%20y_%7Bf%7D%20%3D%20f%20%26%20%5Ctext%7Bin%20%7D%20%5COmega%2C%20%5C%5C%20y_%7Bf%7D%20%3D%200%20%26%20%5Ctext%7Bon%20%7D%20%5CGamma.%20%5Cend%7Bcases%7D">
-</p>
-
-With the above separation of the state variable, the cost functional can be expressed as
-
-<p align="center">
-    <img src="https://latex.codecogs.com/gif.latex?%5Cmathcal%7BJ%7D%20%5Cleft%28%20u%20%5Cright%29%20%3D%20%5Cfrac%7B1%7D%7B2%7D%20%5Cleft%28%20y_u%20&plus;%20y_f%20-%20y_d%2C%20y_u%20&plus;%20y_f%20-%20y_d%20%5Cright%29_%7BL%5E2%5Cleft%28%20%5COmega%20%5Cright%29%7D%20&plus;%20%5Cfrac%7B%5Cbeta%7D%7B2%7D%20%5Cleft%28%20u%20%2C%20u%20%5Cright%29%20_%7BL%5E2%5Cleft%28%20%5COmega%20%5Cright%29%7D.">
-</p>
-
-We define a linear operator 
-
-<p align="center">
-    <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20%5CLambda%3A%20L%5E2%5Cleft%28%20%5COmega%20%5Cright%29%20%26%20%5Crightarrow%20L%5E2%5Cleft%28%20%5COmega%20%5Cright%29%20%5C%5C%20u%20%26%20%5Crightarrow%20y_u%20%5Cend%7Balign*%7D2">
-</p>
-
-and its adjoint
-
-<p align="center">
-    <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20%5CLambda%3A%20L%5E2%5Cleft%28%20%5COmega%20%5Cright%29%20%26%20%5Crightarrow%20L%5E2%5Cleft%28%20%5COmega%20%5Cright%29%20%5C%5C%20%5Cphi%20%26%20%5Crightarrow%20%5Clambda%20%5Cend%7Balign*%7D">
-</p>
-
-with <img src="https://latex.codecogs.com/gif.latex?\lambda"> solution to
-
-<p align="center">
-    <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bcases%7D%20-%20%5CDelta%20%5Clambda%20%3D%20%5Cphi%20%26%20%5Ctext%7Bin%20%7D%20%5COmega%2C%20%5C%5C%20%5Clambda%20%3D%200%20%26%20%5Ctext%7Bon%20%7D%20%5CGamma.%20%5Cend%7Bcases%7D">
-</p>
-
-The directional derivative of the cost function then reads as
-
-<p align="center">
-    <img src="https://latex.codecogs.com/gif.latex?%5Cmathcal%7BD%7D_%7B%5Cdelta%20u%7D%20%5Cmathcal%7BJ%7D%5Cleft%28%20u%20%5Cright%29%20%3D%20%5Cleft%28%20%5Cunderbrace%7B%20%5Cleft%28%20%5CLambda%5E*%20%5CLambda%20&plus;%20%5Cbeta%20I%20%5Cright%29%7D_%7BA_%7Bcg%7D%7D%20u%20-%20%5Cunderbrace%7B%20%5CLambda%5E*%20%5Cleft%28%20y_d%20-%20y_f%20%5Cright%29%7D_%7Bb_%7Bcg%7D%7D%2C%20%5Cdelta%20u%20%5Cright%29%20_%7BL%5E2%5Cleft%28%20%5COmega%20%5Cright%29%7D.">
-</p>
-
-After having identified <img src="https://latex.codecogs.com/gif.latex?A_%7Bcg%7D"> and <img src="https://latex.codecogs.com/gif.latex?b_%7Bcg%7D"> we can use the conjugate gradient method to reach the optimal control faster. 
+## Mesh Motion Solver
 
 ## Getting Started
 
@@ -177,7 +115,6 @@ in order to be able to execute
 ## Author
 
 * **Jose Lorenzo Gomez**
-* **Víctor Hernández-Santamaría**
 
 ## Acknowledgments
 
@@ -186,5 +123,3 @@ This project has received funding from the European Research Council (ERC) under
 [DyCon Webpage](http://cmc.deusto.eus/dycon/)
 
 ## References
-
-* F. Tröltzsch. _Optimal control of partial differential equations: theory, methods, and applications_. American Mathematical Soc., 2010.
