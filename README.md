@@ -156,9 +156,21 @@ When the hole center is displaced from the origin, the target state must be exte
     <img src="https://latex.codecogs.com/gif.latex?u_d%5Cleft%28%20r%20%5Cright%29%3D%20%5Cbegin%7Bcases%7D%20u_s%2C%20%5Cquad%20%26%20r%20%5Cleq%20R_s%2C%20%5C%5C%20u_%7Banalytic%7D%2C%20%5Cquad%20%26%20R_s%20%3C%20r%20%5Cleq%20R_w.%20%5Cend%7Bcases%7D">
 </p>
 
-It is clear that for <img src="https://latex.codecogs.com/gif.latex?%5CGamma%5E%7B*%7D_s%20%3D%20%5Cleft%5C%7B%20%5Cleft%28%20x%2C%20y%20%5Cright%29%20%5Cin%20%5Cmathbb%7BR%7D%5E2%20%3A%20%5Csqrt%7Bx%5E2%20&plus;%20y%5E2%7D%20%3D%20R_s%20%5Cright%5C%7D"> the cost function equals zero, thus it is an optimal solution.
+It is clear that for
 
-The steepest descent algorithm has been coded in the OpenFOAM solver _poissonOptShapeFoam_ with <img src="https://latex.codecogs.com/gif.latex?%5Cepsilon%20%3D%2010%5E%7B-3%7D">.
+<p align="center">
+    <img src="https://latex.codecogs.com/gif.latex?%5CGamma%5E%7B*%7D_s%20%3D%20%5Cleft%5C%7B%20%5Cleft%28%20x%2C%20y%20%5Cright%29%20%5Cin%20%5Cmathbb%7BR%7D%5E2%20%3A%20%5Csqrt%7Bx%5E2%20&plus;%20y%5E2%7D%20%3D%20R_s%20%5Cright%5C%7D">
+</p>
+
+the cost function equals zero, thus it is an optimal solution. The steepest descent algorithm has been coded in the OpenFOAM solver _poissonOptShapeFoam_ with <img src="https://latex.codecogs.com/gif.latex?%5Cepsilon%20%3D%2010%5E%7B-3%7D">.
+
+<p align="center">
+  <img src="poissonOptShapeFoamCase/figs/fig2.png" width="400" height="300">
+</p>
+
+<p align="center">
+  <img src="poissonOptShapeFoamCase/figs/fig3.png" width="400" height="300">
+</p>
 
 ### Warning
 
