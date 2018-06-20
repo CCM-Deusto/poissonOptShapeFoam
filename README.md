@@ -138,6 +138,23 @@ The reference geometry to be optimized is an inner hole with boundary given by
   <img src="poissonOptShapeFoamCase/figs/fig1.png" width="400" height="300">
 </p>
 
+The target function <img src="https://latex.codecogs.com/gif.latex?u_d"> will be the analytical solution of the Poisson equation with the inner hole centered in the origin,
+
+<p align="center">
+    <img src="https://latex.codecogs.com/gif.latex?u_%7Banalytic%7D%5Cleft%28%20r%20%5Cright%29%20%3D%20-%5Cfrac%7Bf%7D%7B4%7Dr%5E2%20&plus;%20c_1%20%5Clog%20r%20&plus;%20c_2%2C">
+</p>
+
+where the integration constants are obtained from the boundary conditions,
+
+<p align="center">
+    <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20c_1%20%3D%20%26%20%5Cfrac%7Bu_w%20-%20u_s%20&plus;%20%5Cdisplaystyle%20%5Cfrac%7Bf%7D%7B4%7D%20%5Cleft%28%20R_w%5E2%20-%20R_s%5E2%20%5Cright%29%7D%7B%5Clog%5Cleft%28%20%5Cdisplaystyle%20%5Cfrac%7BR_w%7D%7BR_s%7D%20%5Cright%29%7D%2C%20%5C%5C%20c_2%20%3D%20%26%20%5Cfrac%7Bu_w%20&plus;%20u_s%7D%7B2%7D%20&plus;%20%5Cfrac%7Bf%7D%7B8%7D%5Cleft%28%20R_w%5E2%20&plus;%20R_s%5E2%20%5Cright%29%20-%20%5Cfrac%7Bc_1%7D%7B2%7D%20%5Clog%5Cleft%28%20R_w%20R_s%20%5Cright%29.%20%5Cend%7Balign*%7D">
+</p>
+
+When the hole center is displaced from the origin, the target state must be extended in the region <img src="https://latex.codecogs.com/gif.latex?r%20%5Cleq%20R_1">, thus
+
+<p align="center">
+    <img src="https://latex.codecogs.com/gif.latex?u_d%5Cleft%28%20r%20%5Cright%29%3D%20%5Cbegin%7Bcases%7D%20u_s%2C%20%5Cquad%20%26%20r%20%5Cleq%20R_s%2C%20%5C%5C%20u_%7Banalytic%7D%2C%20%5Cquad%20%26%20R_s%20%3C%20r%20%5Cleq%20R_w.%20%5Cend%7Bcases%7D">
+</p>
 
 The _poissonCGAdjointFoam_ solver has been tested in a square domain <img src="https://latex.codecogs.com/gif.latex?%5B0%2C%201%5D%20%5Ctimes%20%5B0%2C%201%5D"> with zero Dirichlet boundary conditions and <img src="https://latex.codecogs.com/gif.latex?%5Cbeta%20%3D%2010%5E%7B-3%7D%2C10%5E%7B-4%7D%2C10%5E%7B-5%7D%2C10%5E%7B-6%7D">. The target function is <img src="https://latex.codecogs.com/gif.latex?y_d%20%3D%20xy%20%5Csin%20%5Cleft%28%20%5Cpi%20x%20%5Cright%29%20%5Csin%20%5Cleft%28%20%5Cpi%20y%20%5Cright%29">.
 
