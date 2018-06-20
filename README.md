@@ -176,6 +176,8 @@ the cost function equals zero, thus it is an optimal solution. The steepest desc
   <img src="poissonOptShapeFoamCase/figs/laplace_uniform.gif" width="400" height="300">
 </p>
 
+![test](poissonOptShapeFoamCase/figs/fig3.png)
+
 ### Warning
 
 It might be needed to use 
