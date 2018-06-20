@@ -135,7 +135,7 @@ The reference geometry to be optimized is an inner hole with boundary given by
 </p>
 
 <p align="center">
-  <img src="poissonOptShapeFoamCase/figs/fig1.png">
+  <img src="poissonOptShapeFoamCase/figs/fig1.png" width="500" height="300">
 </p>
 
 
