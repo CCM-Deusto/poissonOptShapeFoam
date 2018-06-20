@@ -106,6 +106,45 @@ and then use
 wmake
 ```
 
+### Dynamic Mesh
+
+The mesh motion solver is specified in the dictionary _constant/dynamicMeshDict_.
+
+* For the Laplacian solver:
+
+```C++
+dynamicFvMesh   dynamicMotionSolverFvMesh;
+
+motionSolverLibs ( "libfvMotionSolvers.so" );
+
+solver          displacementLaplacian;
+
+displacementLaplacianCoeffs
+{
+    //diffusivity  	uniform;
+    //diffusivity     	inversePointDistance (deformedWall);
+    diffusivity     	quadratic inversePointDistance (deformedWall);
+}
+```
+
+* For SBR Stress method:
+
+```C++
+motionSolver 	displacementSBRStress;
+
+displacementSBRStressCoeffs
+{
+    // diffusivity  	uniform;
+    // diffusivity  	directional (1 200 0);
+    // diffusivity  	motionDirectional (1 1000 0);
+    // diffusivity  	file motionDiffusivity;
+    // diffusivity  	quadratic inverseFaceDistance (deformedWall);
+    // diffusivity  	quadratic inverseDistance (deformedWall);
+    diffusivity  	quadratic inversePointDistance (deformedWall);
+    // diffusivity	inversePointDistance (deformedWall);
+}
+```
+
 ### Prerequisites
 
 OpenFOAM C++ library must be installed in order to compile the code.

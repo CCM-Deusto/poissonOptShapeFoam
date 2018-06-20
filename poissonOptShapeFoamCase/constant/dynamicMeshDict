@@ -19,14 +19,13 @@ dynamicFvMesh   dynamicMotionSolverFvMesh;
 
 motionSolverLibs ( "libfvMotionSolvers.so" );
 
-
 solver          displacementLaplacian;
+
 displacementLaplacianCoeffs
 {
-    //diffusivity     	quadratic inversePointDistance (deformedWall);
-    diffusivity     	quadratic inversePointDistance (deformedWall);
-    //diffusivity     	quadratic inversePointDistance (deformedWall topWall bottomWall rightWall leftWall);
     //diffusivity  	uniform;
+    //diffusivity     	inversePointDistance (deformedWall);
+    diffusivity     	quadratic inversePointDistance (deformedWall);
 }
 
 
