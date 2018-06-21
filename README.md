@@ -209,7 +209,7 @@ the cost function equals zero, thus it is an optimal solution. The steepest desc
 </p>
 
 <p align="center">
-  <img src="poissonOptShapeFoamCase/figs/laplace_uniform.gif" width="400" height="230">
+  <img src="poissonOptShapeFoamCase/figs/laplace_uniform.gif" width="600" height="350">
 </p>
 
 ### Warning
