@@ -204,12 +204,12 @@ It is clear that for
 the cost function equals zero, thus it is an optimal solution. The steepest descent algorithm has been coded in the OpenFOAM solver _poissonOptShapeFoam_ with <img src="https://latex.codecogs.com/gif.latex?%5Cepsilon%20%3D%2010%5E%7B-3%7D">.
 
 <p align="center">
-  <img src="poissonOptShapeFoamCase/figs/fig2.png" width="400" height="340">
+  <img src="poissonOptShapeFoamCase/figs/fig2.png" width="400" height="300">
   <img src="poissonOptShapeFoamCase/figs/fig3.png" width="400" height="300">
 </p>
 
 <p align="center">
-  <img src="poissonOptShapeFoamCase/figs/laplace_uniform.gif" width="400" height="300">
+  <img src="poissonOptShapeFoamCase/figs/laplace_uniform.gif" width="400" height="230">
 </p>
 
 ### Warning
