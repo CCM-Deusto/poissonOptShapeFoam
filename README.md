@@ -174,7 +174,11 @@ The reference geometry to be optimized is an inner hole with boundary given by
 </p>
 
 <p align="center">
-  <img src="poissonOptShapeFoamCase/figs/fig1.png" width="400" height="340">
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptShapeFoam/blob/master/poissonOptShapeFoamCase/figs/fig1.png" target="_blank"><img src="poissonOptShapeFoamCase/figs/fig1.png" width="400" height="340"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ChairOfComputationalMathematics/poissonOptShapeFoam/blob/master/poissonOptShapeFoamCase/figs/fig1.png" target="_blank">Click here to open image 1.</a>
 </p>
 
 The target function <img src="https://latex.codecogs.com/gif.latex?u_d"> will be the analytical solution of the Poisson equation with the inner hole centered in the origin,
@@ -204,12 +208,27 @@ It is clear that for
 the cost function equals zero, thus it is an optimal solution. The steepest descent algorithm has been coded in the OpenFOAM solver _poissonOptShapeFoam_ with <img src="https://latex.codecogs.com/gif.latex?%5Cepsilon%20%3D%2010%5E%7B-3%7D">.
 
 <p align="center">
-  <img src="poissonOptShapeFoamCase/figs/fig2.png" width="400" height="300">
-  <img src="poissonOptShapeFoamCase/figs/fig3.png" width="400" height="300">
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptShapeFoam/blob/master/poissonOptShapeFoamCase/figs/fig2.png" target="_blank"><img src="poissonOptShapeFoamCase/figs/fig2.png" width="400" height="300"></a>
 </p>
 
 <p align="center">
-  <img src="poissonOptShapeFoamCase/figs/laplace_uniform.gif" width="600" height="350">
+  <a href="https://github.com/ChairOfComputationalMathematics/poissonOptShapeFoam/blob/master/poissonOptShapeFoamCase/figs/fig2.png" target="_blank">Click here to open image 2.</a>
+</p>
+
+<p align="center">
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptShapeFoam/blob/master/poissonOptShapeFoamCase/figs/fig3.png" target="_blank"><img src="poissonOptShapeFoamCase/figs/fig3.png" width="400" height="300"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ChairOfComputationalMathematics/poissonOptShapeFoam/blob/master/poissonOptShapeFoamCase/figs/fig3.png" target="_blank">Click here to open image 3.</a>
+</p>
+
+<p align="center">
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptShapeFoam/blob/master/poissonOptShapeFoamCase/figs/laplace_uniform.gif" target="_blank"><img src="poissonOptShapeFoamCase/figs/laplace_uniform.gif" width="600" height="350"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ChairOfComputationalMathematics/poissonOptShapeFoam/blob/master/poissonOptShapeFoamCase/figs/laplace_uniform.gif" target="_blank">Click here to open animation 1.</a>
 </p>
 
 ### Warning
