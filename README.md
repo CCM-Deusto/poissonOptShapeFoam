@@ -209,10 +209,12 @@ the cost function equals zero, thus it is an optimal solution. The steepest desc
 
 <p align="center">
    <a href="https://github.com/ChairOfComputationalMathematics/poissonOptShapeFoam/blob/master/poissonOptShapeFoamCase/figs/fig2.png" target="_blank"><img src="poissonOptShapeFoamCase/figs/fig2.png" width="400" height="300"></a>
+   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptShapeFoam/blob/master/poissonOptShapeFoamCase/figs/fig3.png" target="_blank"><img src="poissonOptShapeFoamCase/figs/fig3.png" width="400" height="300"></a>
 </p>
 
 <p align="center">
   <a href="https://github.com/ChairOfComputationalMathematics/poissonOptShapeFoam/blob/master/poissonOptShapeFoamCase/figs/fig2.png" target="_blank">Click here to open image 2.</a>
+  <a href="https://github.com/ChairOfComputationalMathematics/poissonOptShapeFoam/blob/master/poissonOptShapeFoamCase/figs/fig3.png" target="_blank">Click here to open image 3.</a>
 </p>
 
 <p align="center">
