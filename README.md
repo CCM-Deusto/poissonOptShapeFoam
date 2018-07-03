@@ -1,4 +1,4 @@
-# Optimal Shape Design for Poisson Equation
+# Optimal Shape Design for Poisson Equation in OpenFOAM
 
 We study the shape design problem through the minimization of the cost functional
 
